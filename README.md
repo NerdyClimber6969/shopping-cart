@@ -1,0 +1,1 @@
+Project of building online shop page and its shopping cart using react and react route
