@@ -7,8 +7,8 @@ function ProductCard({ product, addToCart }) {
 
     return (
         <div data-testid="product-card">
-            <img src={product.image} alt={product.name} data-testid="product-image"/>
-            <h3 data-testid="product-name">{product.name}</h3>
+            <img src={product.image} alt={product.title} data-testid="product-image"/>
+            <h3 data-testid="product-name">{product.title}</h3>
             <p data-testid="product-price">{product.price}</p>
             <div>
                 <button data-testid="decrement-button" onClick={handleDecrement}>-</button>
