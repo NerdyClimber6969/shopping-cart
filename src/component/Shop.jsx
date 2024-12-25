@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import useFakeShop from "../useFakeShop.jsx";
+import { useOutletContext } from "react-router-dom";
 import ProductCard from "./ProductCard.jsx";
-
+import "../style/Shop.css"
 
 function Shop() {
-    const { products, loading } = useFakeShop();
+    const { loading, products } = useOutletContext();
 
     if (loading) return (
         <div className='loadingSpinnerContainer'>
@@ -14,12 +13,22 @@ function Shop() {
     );
 
     return (
-        <>
+        <div className="shop">
             <p>This is a online Shop</p>
             <div className="product-list">
-                {products.map((product) => (<ProductCard product={product}/>))}
+                {
+                    products.map((product) => (
+                        <ProductCard 
+                            id={product.id}
+                            image={product.image}
+                            title={product.title}
+                            price={product.price} 
+                            key={product.id}
+                        />
+                    ))
+                }
             </div>
-        </>
+        </div>
     )
 }
 

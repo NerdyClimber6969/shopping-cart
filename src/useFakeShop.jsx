@@ -15,8 +15,6 @@ function useFakeShop() {
         };
 
         fecthPorducts();
-
-        
     }, []);
 
     return { products, loading };

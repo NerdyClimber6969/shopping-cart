@@ -1,0 +1,14 @@
+.product-card {
+    height: 300px;
+    max-width: 300px;
+}
+
+.img-container {
+    width: 100%;
+}
+
+.product-card img {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+}
