@@ -6,25 +6,13 @@ import "./style/App.css"
 
 function App() {
   const { products, loading } = useFakeShop();
-  const [cartLength, setCartLength] = useState(0);
-  const cartRef = useRef();
-
-  useEffect(() => {
-    const savedCart = localStorage.getItem("cart");
-
-    if (savedCart) {
-      cartRef.current = JSON.parse(savedCart)
-    } else {
-      cartRef.current = [];
-    };
-
-    setCartLength(cartRef.current.length)
-  }, []);
-
+  const cartLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
+  const [cartLength, setCartLength] = useState(cartLocalStorage.length);
+  
   return (
     <div className="app">
       <NavBar cartLength={cartLength}/>
-      <Outlet context={{products, loading, cartLength, setCartLength, cartRef}}/>
+      <Outlet context={{products, loading, cartLength, setCartLength, cartLocalStorage}}/>
     </div>
   );
 };
