@@ -1,0 +1,35 @@
+.nav-bar {
+    width: max(320px, 30%);
+    margin: 0 auto;
+}
+
+.nav-bar a {
+    padding: var(--small-spacing);
+    border-radius: 20px;
+}
+
+.nav-bar > h1 {
+    font-size: var(--primary-font-size);
+    margin-bottom: var(--large-spacing);
+}
+
+.nav-bar > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px var(--small-spacing);
+    border: solid black;
+    border-radius: 20px;
+}
+
+li:nth-child(3) > a {
+    display: flex;
+    font-size: var(--secondary-fon-size);
+    gap: 15px;
+}
+
+.nav-bar a:hover {
+    background-color: aqua;
+}

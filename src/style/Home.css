@@ -1,0 +1,9 @@
+.home {
+    margin: auto;
+    animation: slide-in 0.8s 1;
+}
+
+.home > p {
+    font-size: var(--primary-font-size);
+    margin-bottom: 30px;
+}

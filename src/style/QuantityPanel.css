@@ -1,0 +1,33 @@
+.quantity-pandel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: solid gray 2px;
+}
+
+.quantity-input,
+.quantity-pandel > .btn {
+    width: 40px;
+    height: 32px;
+    border: none;
+}
+
+.quantity-input {
+    font-size: var(--tertiary-font-size);
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+
+.quantity-pandel > .btn {
+    text-align: center;
+    font-size: var(--secondary-font-size);
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.quantity-pandel > .btn:hover {
+    color: white;
+    background-color: black;
+}

@@ -36,20 +36,22 @@ function ProductCard({ id, image, title, orderQuantity=0, price }) {
 
     return (
         <div data-testid="product-card" className="product-card">
-            <div className="product-info">
-                <div className="image-container">
-                    <img src={image} alt={title} data-testid="product-image"/>
-                </div>
-                <h3 data-testid="product-name">{title}</h3>
-                <p data-testid="product-price">{price}</p>
+            <div className="image-container">
+                <img src={image} alt={title} data-testid="product-image"/>
             </div>
-            <QuantityPanel 
-                quantity={quantity} 
-                onChange={setQuantity}
-                onIncrement={handleIncrement}
-                onDecrement={handleDecrement}
-            />
-            <button onClick={addToCart}>Add to cart</button>
+            <div>
+                <h3 data-testid="product-name" className="product-name">{title}</h3>
+                <p data-testid="product-price" className="product-price">$ {price}</p>
+            </div>
+            <div className="wrapper">
+                <QuantityPanel 
+                    quantity={quantity} 
+                    onChange={setQuantity}
+                    onIncrement={handleIncrement}
+                    onDecrement={handleDecrement}
+                />
+                <button className="btn" onClick={addToCart}>Add to cart</button>
+            </div>
         </div>
     );
 };

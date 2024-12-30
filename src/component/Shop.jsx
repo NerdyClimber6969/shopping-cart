@@ -14,7 +14,6 @@ function Shop() {
 
     return (
         <div className="shop">
-            <p>This is a online Shop</p>
             <div className="product-list">
                 {
                     products.map((product) => (
